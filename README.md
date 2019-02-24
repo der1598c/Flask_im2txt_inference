@@ -1,3 +1,7 @@
+# Overview
+  - Build and execute Docker containers to set up Flask web-service
+  - The Service will receive the image (via POST) and perform the analysis of the image behavior (via Google's [im2txt][tensorflow/models] open source project)
+
 # Environment requirements :
   - Install [Docker][Docker-officeSite] on your PC(macOS, Windows, linux)
 
@@ -52,5 +56,6 @@ $ curl -v -F image=@folder/test.jpg http://localhost:5000/inference
 [{"caption": "a slice of pizza sitting on top of a white plate .", "p": 0.0037768055172771216}, {"caption": "a slice of pizza on a white plate .", "p": 0.001855960700329915}, {"caption": "a slice of pizza on a white plate", "p": 0.0008495462407023139}]
 ```
 
+   [tensorflow/models]: <https://github.com/tensorflow/models>
    [Docker-officeSite]: <https://www.docker.com/>
    [pre-trained]: <https://ibm.ent.box.com/v/show-and-tell-pretrained>
