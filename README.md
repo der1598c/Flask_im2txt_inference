@@ -53,7 +53,20 @@ $ curl -v -F image=@folder/test.jpg http://localhost:5000/inference
 > Result
    - JSON format
 ```
-[{"caption": "a slice of pizza sitting on top of a white plate .", "p": 0.0037768055172771216}, {"caption": "a slice of pizza on a white plate .", "p": 0.001855960700329915}, {"caption": "a slice of pizza on a white plate", "p": 0.0008495462407023139}]
+[
+  {
+    "caption": "a slice of pizza sitting on top of a white plate .", 
+    "p": 0.0037768055172771216
+  }, 
+  {
+    "caption": "a slice of pizza on a white plate .", 
+    "p": 0.001855960700329915
+  }, 
+  {
+    "caption": "a slice of pizza on a white plate", 
+    "p": 0.0008495462407023139
+  }
+]
 ```
 
    [tensorflow/models]: <https://github.com/tensorflow/models>
