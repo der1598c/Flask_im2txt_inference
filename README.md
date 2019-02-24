@@ -1,6 +1,7 @@
-# Overview
-  - Build and execute Docker containers to set up Flask web-service
-  - The Service will receive the image (via POST) and perform the analysis of the image behavior (via Google's [im2txt][tensorflow/models] open source project)
+# Overview :
+  - Build and execute Docker containers to set up Flask web-service.
+  - The Service will receive the image (via POST) and perform the analysis of the image behavior (via Google's [im2txt][tensorflow/models] open source project).
+  - Just three steps.
 
 # Environment requirements :
   - Install [Docker][Docker-officeSite] on your PC(macOS, Windows, linux)
@@ -9,30 +10,30 @@
   - A pre-trained model can be downloaded at [here][pre-trained].
   - Put the file in the "chkpt" folder.
   - The folder structure is as follows.
-chkpt
-⊦ model.ckpt-1000000.data-00000-of-00001
-⊦ model.ckpt-1000000.meta
-⊦ model.ckpt-1000000.index  
-⨽ word_counts.txt
+  - chkpt
+  - ⊦ model.ckpt-1000000.data-00000-of-00001
+  - ⊦ model.ckpt-1000000.meta
+  - ⊦ model.ckpt-1000000.index  
+  - ⨽ word_counts.txt
 
-# Before clone this repostory :
+# Start doing :
   - Use the terminal to move to the root directory. (The following is an example of macOS instructions)
 > STEP 1  (Build image by Dockerfile)
-  - Execution: docker build -t <image name>:<tag> .
-  - Replace <image name> with your name
-  - <tag> please replace it with your label
+  - The command is : docker build -t image-name:tag .
+  - Replace image-name with your name
+  - Replace tag with your label
   - ex. 
 ```sh
 $ docker build -t first-image:latest .
 ```
 
 > STEP 2  (Run image)
-  - List of images. Find your image id
+  - List of images & Find your image id
 ```sh
 $ docker images
 ```
   - Run by image id.
-  - The command is : docker run -p 5000:5000 -i -t <image id>
+  - The command is : docker run -p 5000:5000 -i -t image-id
   - ex.
 ```sh
 $ docker run -p 5000:5000 -i -t 938ddb14e4d8
